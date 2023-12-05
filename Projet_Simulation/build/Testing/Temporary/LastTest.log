@@ -1,0 +1,148 @@
+Start testing: Nov 06 15:17 CET
+----------------------------------------------------------
+1/5 Testing: UnitaryTest.MeshTest
+1/5 Test: UnitaryTest.MeshTest
+Command: "/Users/adri/Desktop/Travail/M1CHPS/Prog_Object/Projet_Simulation/build/Test" "--gtest_filter=UnitaryTest.MeshTest" "--gtest_also_run_disabled_tests"
+Directory: /Users/adri/Desktop/Travail/M1CHPS/Prog_Object/Projet_Simulation/build
+"UnitaryTest.MeshTest" start time: Nov 06 15:17 CET
+Output:
+----------------------------------------------------------
+Running main() from /Users/adri/googletest/googletest/src/gtest_main.cc
+Note: Google Test filter = UnitaryTest.MeshTest
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from UnitaryTest
+[ RUN      ] UnitaryTest.MeshTest
+[       OK ] UnitaryTest.MeshTest (0 ms)
+[----------] 1 test from UnitaryTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"UnitaryTest.MeshTest" end time: Nov 06 15:17 CET
+"UnitaryTest.MeshTest" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/5 Testing: UnitaryTest.ProblemTest
+2/5 Test: UnitaryTest.ProblemTest
+Command: "/Users/adri/Desktop/Travail/M1CHPS/Prog_Object/Projet_Simulation/build/Test" "--gtest_filter=UnitaryTest.ProblemTest" "--gtest_also_run_disabled_tests"
+Directory: /Users/adri/Desktop/Travail/M1CHPS/Prog_Object/Projet_Simulation/build
+"UnitaryTest.ProblemTest" start time: Nov 06 15:17 CET
+Output:
+----------------------------------------------------------
+Running main() from /Users/adri/googletest/googletest/src/gtest_main.cc
+Note: Google Test filter = UnitaryTest.ProblemTest
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from UnitaryTest
+[ RUN      ] UnitaryTest.ProblemTest
+Mesh is a null pointer
+[       OK ] UnitaryTest.ProblemTest (0 ms)
+[----------] 1 test from UnitaryTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"UnitaryTest.ProblemTest" end time: Nov 06 15:17 CET
+"UnitaryTest.ProblemTest" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/5 Testing: UnitaryTest.EquationTest
+3/5 Test: UnitaryTest.EquationTest
+Command: "/Users/adri/Desktop/Travail/M1CHPS/Prog_Object/Projet_Simulation/build/Test" "--gtest_filter=UnitaryTest.EquationTest" "--gtest_also_run_disabled_tests"
+Directory: /Users/adri/Desktop/Travail/M1CHPS/Prog_Object/Projet_Simulation/build
+"UnitaryTest.EquationTest" start time: Nov 06 15:17 CET
+Output:
+----------------------------------------------------------
+Running main() from /Users/adri/googletest/googletest/src/gtest_main.cc
+Note: Google Test filter = UnitaryTest.EquationTest
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from UnitaryTest
+[ RUN      ] UnitaryTest.EquationTest
+[       OK ] UnitaryTest.EquationTest (0 ms)
+[----------] 1 test from UnitaryTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"UnitaryTest.EquationTest" end time: Nov 06 15:17 CET
+"UnitaryTest.EquationTest" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/5 Testing: MainFunctionTest.EquationTest
+4/5 Test: MainFunctionTest.EquationTest
+Command: "/Users/adri/Desktop/Travail/M1CHPS/Prog_Object/Projet_Simulation/build/Test" "--gtest_filter=MainFunctionTest.EquationTest" "--gtest_also_run_disabled_tests"
+Directory: /Users/adri/Desktop/Travail/M1CHPS/Prog_Object/Projet_Simulation/build
+"MainFunctionTest.EquationTest" start time: Nov 06 15:17 CET
+Output:
+----------------------------------------------------------
+Running main() from /Users/adri/googletest/googletest/src/gtest_main.cc
+Note: Google Test filter = MainFunctionTest.EquationTest
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from MainFunctionTest
+[ RUN      ] MainFunctionTest.EquationTest
+[       OK ] MainFunctionTest.EquationTest (0 ms)
+[----------] 1 test from MainFunctionTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"MainFunctionTest.EquationTest" end time: Nov 06 15:17 CET
+"MainFunctionTest.EquationTest" time elapsed: 00:00:00
+----------------------------------------------------------
+
+5/5 Testing: myTest
+5/5 Test: myTest
+Command: "/Users/adri/Desktop/Travail/M1CHPS/Prog_Object/Projet_Simulation/build/Test"
+Directory: /Users/adri/Desktop/Travail/M1CHPS/Prog_Object/Projet_Simulation/build
+"myTest" start time: Nov 06 15:17 CET
+Output:
+----------------------------------------------------------
+Running main() from /Users/adri/googletest/googletest/src/gtest_main.cc
+[==========] Running 4 tests from 2 test suites.
+[----------] Global test environment set-up.
+[----------] 3 tests from UnitaryTest
+[ RUN      ] UnitaryTest.MeshTest
+[       OK ] UnitaryTest.MeshTest (0 ms)
+[ RUN      ] UnitaryTest.ProblemTest
+Mesh is a null pointer
+[       OK ] UnitaryTest.ProblemTest (0 ms)
+[ RUN      ] UnitaryTest.EquationTest
+[       OK ] UnitaryTest.EquationTest (0 ms)
+[----------] 3 tests from UnitaryTest (0 ms total)
+
+[----------] 1 test from MainFunctionTest
+[ RUN      ] MainFunctionTest.EquationTest
+[       OK ] MainFunctionTest.EquationTest (0 ms)
+[----------] 1 test from MainFunctionTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 4 tests from 2 test suites ran. (0 ms total)
+[  PASSED  ] 4 tests.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"myTest" end time: Nov 06 15:17 CET
+"myTest" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Nov 06 15:17 CET
