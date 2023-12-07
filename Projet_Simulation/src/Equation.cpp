@@ -35,7 +35,7 @@ Variable Equation::compute(Variable &u_n, Variable &u_np1)
         CFL = a * (u_n.get_mesh()->get_dt()/u_n.get_mesh()->get_dx());
     }
 
-    u_np1.set_I_elem(0, u_n[0]*this->get_speed());
+    u_np1.set_I_elem(0, 0);
 
     for(int i = 1; i < u_n.get_mesh()->x_size(); ++i )
     {
@@ -68,10 +68,10 @@ Variable Equation::compute_initial_condition(Variable &u, IMesh *mesh)
 }
 
 /* Computes the exact solution */
-Variable Equation::compute_exact_solution(Variable &v, IMesh *mesh, int curr_time)
+Variable Equation::compute_exact_solution(IMesh *mesh, int curr_time)
 {
-    Variable u_exact = v; 
-    u_exact.set_M_name("u_ref");
+    Variable u_exact( mesh, mesh->x_size(), "u_ref"); 
+    //u_exact.set_M_name("u_ref");
     float a = this->get_speed();
 
     float theta = 10* mesh->get_dx();
@@ -81,9 +81,8 @@ Variable Equation::compute_exact_solution(Variable &v, IMesh *mesh, int curr_tim
 
     for(int i = 0; i < mesh->x_size(); ++i)
     {
-        x_i = Gaussian_Advection(theta, pi, mu, (v[i]-(a*curr_time)));
-        u_exact.set_I_elem(i,x_i);
+        x_i = Gaussian_Advection(theta, pi, mu, (mesh->x_i(i)-(a*curr_time)));
+        u_exact.set_I_elem(i, x_i);
     }
     return u_exact;
-
 }

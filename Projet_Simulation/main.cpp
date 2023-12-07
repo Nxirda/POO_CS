@@ -4,18 +4,23 @@
 #include "Equation.h"
 #include "Problem.h"
 #include "EnumMesh.h"
+#include "Timer.h"
 
 int main(int argc, char **argv)
 {
 
     if(argc == 1)
     {
+        Timer t;
+        t.start();
+
         Equation E{}; 
         IMesh* IM = new UniformMesh{};
         Problem P {E, IM};
-        std::cout << "=== DEFAULT EQUATION === \n";
-        std::cout <<"\n";
         P.solve();
+
+        t.stop();
+        t.print("Equation Solving");
         return 0;
     }
     else if(argc != 8 )
@@ -58,9 +63,18 @@ int main(int argc, char **argv)
                 break;
 
         }
+        //Count time
 
         Equation E{};
         Problem P = {E, IM};
-        P.solve();
+
+        Timer t;
+        t.start();
+
+        //P.solve();
+        P.solve_parallel();
+
+        t.stop();
+        t.print("Equation Solving");
     }
 }

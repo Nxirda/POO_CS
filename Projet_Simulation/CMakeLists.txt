@@ -9,7 +9,8 @@ set(CMAKE_CXX_STANDARD 17)
 # ===== CODE PART =====
 
 # add the executable
-add_executable(Main main.cpp src/Equation.cpp src/Problem.cpp src/UniformMesh.cpp src/NonUniformMesh.cpp src/Variable.cpp)
+add_executable(Main main.cpp src/Equation.cpp src/Problem.cpp src/UniformMesh.cpp 
+                             src/NonUniformMesh.cpp src/Variable.cpp src/Timer.cpp)
 
 add_compile_options(-Wall -Wextra -Wpedantic)
 
@@ -32,9 +33,11 @@ enable_testing()
 
 #Find Google test package
 find_package(GTest REQUIRED)
+find_package(Threads REQUIRED)
 
 #Add test executable
-add_executable(Test src/test.cpp src/Equation.cpp src/Problem.cpp src/UniformMesh.cpp src/NonUniformMesh.cpp src/Variable.cpp)
+add_executable(Test src/test.cpp src/Equation.cpp src/Problem.cpp src/UniformMesh.cpp 
+                    src/NonUniformMesh.cpp src/Variable.cpp src/Timer.cpp)
 add_test(myTest Test)
 target_include_directories(Test PUBLIC
                           "${PROJECT_SOURCE_DIR}/Results"
@@ -42,6 +45,7 @@ target_include_directories(Test PUBLIC
                           src/)
 #link lib
 target_link_libraries(Test PUBLIC GTest::GTest GTest::Main)
+target_link_libraries(Threads::Threads)
 #target_link_libraries(Test PUBLIC mylib)
 
 #link dir

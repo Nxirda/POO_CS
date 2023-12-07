@@ -63,7 +63,9 @@ void Variable::set_M_name(std::string str)
 }
 
 /* Printer for Variable class */
-void Variable::print(float iteration_Value)
+#ifndef NDEBUG 
+
+void Variable::print_in_file(float iteration_Value)
 {
     // Declaration of the output files
     std::string str = "../Results/Variable_"+this->get_Name()+"-"+std::to_string(iteration_Value)+".dat";
@@ -77,3 +79,16 @@ void Variable::print(float iteration_Value)
     }
     ofs.close();    
 }
+#else
+
+void Variable::print_in_file(float iteration_Value) {}
+
+#endif
+
+/**/
+/* Variable& Variable::operator=(const Variable &v){
+    //this->m_name = "new_Var";
+    this->mesh = v.mesh;
+    this->variable = v.variable;
+    return *this;
+}  */

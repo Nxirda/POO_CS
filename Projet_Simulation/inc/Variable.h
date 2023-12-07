@@ -29,9 +29,10 @@ class Variable
     void set_M_name(std::string str);
 
     //Methods
-    void print(float iteration_Value);
+    void print_in_file(float iteration_Value);
     float &operator [](int idx);
     //Ajouter operator [] const
+    //Variable &operator =(const Variable &v);
 
 };
 

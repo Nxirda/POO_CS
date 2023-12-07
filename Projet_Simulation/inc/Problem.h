@@ -39,6 +39,7 @@ class Problem
 
         //Methods
         void solve();
+        void solve_parallel();
 
 };
 

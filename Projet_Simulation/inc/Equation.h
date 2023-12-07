@@ -27,7 +27,7 @@ class Equation
         //Methods
         Variable compute(Variable &u_n, Variable &u_np1);
         Variable compute_initial_condition(Variable &v, IMesh *mesh);
-        Variable compute_exact_solution(Variable &v, IMesh *mesh, int curr_time);
+        Variable compute_exact_solution(IMesh *mesh, int curr_time);
     private:
         float Gaussian_Advection(float theta, float pi, float mu, float x);
        

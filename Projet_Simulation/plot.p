@@ -8,8 +8,6 @@ plot for [file in list] file w l t file
 pause -1 "Hit any key to continue"
 
 
-
-
 #Global Name
 #set title ''
 #Style of plot (explicit)
