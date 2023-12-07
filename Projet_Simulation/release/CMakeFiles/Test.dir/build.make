@@ -188,6 +188,7 @@ Test: CMakeFiles/Test.dir/src/NonUniformMesh.cpp.o
 Test: CMakeFiles/Test.dir/src/Variable.cpp.o
 Test: CMakeFiles/Test.dir/src/Timer.cpp.o
 Test: CMakeFiles/Test.dir/build.make
+Test: /usr/lib/x86_64-linux-gnu/libtbb.so.12.8
 Test: /usr/lib/x86_64-linux-gnu/libgtest_main.a
 Test: /usr/lib/x86_64-linux-gnu/libgtest.a
 Test: CMakeFiles/Test.dir/link.txt

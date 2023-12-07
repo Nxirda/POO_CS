@@ -1,5 +1,8 @@
 #include <iostream>
+#include <execution>
+#include <algorithm>
 #include <cmath>
+
 
 #include "Equation.h"
 
@@ -59,18 +62,26 @@ Variable Equation::compute_initial_condition(Variable &u, IMesh *mesh)
     float mu = (mesh->get_x_max() - mesh->get_x_min())/2;
     float pi = 4*atan(1);
     float x_i = 0;
-    for(int i = 0; i < mesh->x_size(); ++i)
+    
+    std::vector<float> v = u.get_variable();
+    /* for(int i = 0; i < mesh->x_size(); ++i)
     {
         x_i = Gaussian_Advection(theta, pi, mu, mesh->x_i(i));
         u.set_I_elem(i, x_i);
-    }
+    } */
+
+    std::for_each(std::execution::par, v.begin(), v.end(),[&](auto curr_elem){
+        x_i = Gaussian_Advection(theta, pi, mu, mesh->x_i(curr_elem));
+        u.set_I_elem(curr_elem, x_i);
+    });
+
     return u;
 }
 
 /* Computes the exact solution */
 Variable Equation::compute_exact_solution(IMesh *mesh, int curr_time)
 {
-    Variable u_exact( mesh, mesh->x_size(), "u_ref"); 
+    Variable u_exact(mesh, mesh->x_size(), "u_ref"); 
     //u_exact.set_M_name("u_ref");
     float a = this->get_speed();
 
@@ -79,10 +90,17 @@ Variable Equation::compute_exact_solution(IMesh *mesh, int curr_time)
     float pi = 4*atan(1);
     float x_i = 0;
 
-    for(int i = 0; i < mesh->x_size(); ++i)
+    std::vector<float> v = u_exact.get_variable();
+    /* for(int i = 0; i < mesh->x_size(); ++i)
     {
         x_i = Gaussian_Advection(theta, pi, mu, (mesh->x_i(i)-(a*curr_time)));
         u_exact.set_I_elem(i, x_i);
-    }
+    }  */
+
+    std::for_each(std::execution::par, v.begin(), v.end(),[&](auto curr_elem){
+        x_i = Gaussian_Advection(theta, pi, mu, (mesh->x_i(curr_elem)-(a*curr_time)));
+        u_exact.set_I_elem(curr_elem, x_i);
+    }); 
+    
     return u_exact;
 }

@@ -81,7 +81,7 @@ void Variable::print_in_file(float iteration_Value)
 }
 #else
 
-void Variable::print_in_file(float iteration_Value) {}
+void Variable::print_in_file(float) {}
 
 #endif
 

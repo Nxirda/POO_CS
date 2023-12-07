@@ -16,7 +16,7 @@ void Timer::print(std::string func_name)
     std::cout << "Elapsed time in function "
               << func_name << " : " 
               << s_duration.count() << "s "
-              << ms_duration.count() << "ms "
-              << micro_s_duration.count() << "us \n";
+              << (ms_duration.count()) - (s_duration.count()*1000) << "ms "
+              << (micro_s_duration.count()) - (ms_duration.count()*1000) << "us \n";
                                                     
 }

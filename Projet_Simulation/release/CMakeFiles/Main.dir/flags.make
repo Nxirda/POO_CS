@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/home/nxirda/Desktop/POO_CS/Projet_Simulation/Results -I/home/nxirda/Desktop/POO_CS/Projet_Simulation/inc -I/home/nxirda/Desktop/POO_CS/Projet_Simulation/src
 
-CXX_FLAGS = -O3 -DNDEBUG -std=gnu++17
+CXX_FLAGS = -O3 -DNDEBUG -DGTEST_HAS_PTHREAD=1 -std=gnu++17
 
