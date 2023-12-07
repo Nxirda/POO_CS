@@ -1,5 +1,0 @@
-if(EXISTS "/Users/adri/Desktop/Travail/M1CHPS/Prog_Object/Projet_Simulation/build/Test[1]_tests.cmake")
-  include("/Users/adri/Desktop/Travail/M1CHPS/Prog_Object/Projet_Simulation/build/Test[1]_tests.cmake")
-else()
-  add_test(Test_NOT_BUILT Test_NOT_BUILT)
-endif()
