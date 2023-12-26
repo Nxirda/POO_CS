@@ -32,8 +32,8 @@
 *.app
 
 #build folder
-build/
+build
 
-release/
+release
 
 .vscode/
