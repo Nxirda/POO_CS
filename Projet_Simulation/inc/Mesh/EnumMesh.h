@@ -1,3 +1,6 @@
+#ifndef ENUM_MESH_H_
+#define ENUM_MESH_H_
+
 #include <iostream> 
 #include <string.h>
 #include <map>
@@ -17,3 +20,5 @@ std::map<std::string, MeshType> MeshDictionnary =
     {"uniform", MeshType::UniformMesh}, 
     {"non-uniform", MeshType::NonUniformMesh}
 };
+
+#endif

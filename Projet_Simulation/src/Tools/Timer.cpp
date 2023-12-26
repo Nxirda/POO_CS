@@ -2,12 +2,16 @@
 #include <iostream>
 #include <ctime>
 
+/* Constructor */
 Timer::Timer(){}
 
+/* Starts the timer*/
 void Timer::start() { this->start_time = std::chrono::high_resolution_clock::now(); }
 
+/* Stops the timer*/
 void Timer::stop() { this->end_time = std::chrono::high_resolution_clock::now(); }
 
+/* Prints the time as s/ms/us */
 void Timer::print(std::string func_name) 
 {
     auto micro_s_duration = std::chrono::duration_cast<std::chrono::microseconds> (this->end_time -this->start_time);

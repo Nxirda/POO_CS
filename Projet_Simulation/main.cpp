@@ -17,7 +17,7 @@ int main(int argc, char **argv)
         Equation E{}; 
         IMesh* IM = new UniformMesh{};
         Problem P {E, IM};
-        P.solve();
+        P.solve_parallel();
 
         t.stop();
         t.print("Equation Solving");
@@ -32,7 +32,8 @@ int main(int argc, char **argv)
         std::cout << "(for a custom Problem)\n";
         return 1;
     }
-    else{
+    else
+    {
 
         float t_init  = std::stof(argv[1]);
         float t_final = std::stof(argv[2]);
@@ -71,7 +72,6 @@ int main(int argc, char **argv)
         Timer t;
         t.start();
 
-        //P.solve();
         P.solve_parallel();
 
         t.stop();

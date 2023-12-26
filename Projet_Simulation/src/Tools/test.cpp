@@ -7,7 +7,8 @@
 #include <string>
 #include <vector>
 
-TEST(UnitaryTest,MeshTest){
+TEST(UnitaryTest,MeshTest)
+{
   // Construction et test d'une instance de UniformMesh
   UniformMesh UM{};
   ASSERT_EQ(UM.get_t_ini(), 0);
@@ -18,12 +19,12 @@ TEST(UnitaryTest,MeshTest){
   ASSERT_EQ(UM.get_dx(), 2);
 }
 
-TEST(UnitaryTest,ProblemTest){
+TEST(UnitaryTest,ProblemTest)
+{
   //Test avec IMesh = nullptr
   Equation A{};
   IMesh* Null = nullptr;
   Problem P_null{A, Null};
-  //ASSERT_EQ(P_null.solve(), 0.0);
 
   // Construction et test d'une instance de Problem
   Equation E{}; 
@@ -38,15 +39,12 @@ TEST(UnitaryTest,ProblemTest){
   ASSERT_EQ(P.get_Mesh()->get_dx(), IM->get_dx());
 }
 
-TEST(UnitaryTest,EquationTest){
+TEST(UnitaryTest,EquationTest)
+{
   // Construction et test d'une instance de Problem
   Equation E{}; 
   ASSERT_EQ(E.get_speed(), 1);
 
   E.set_speed(30);
   ASSERT_EQ(E.get_speed(), 30);
-}
-
-TEST(MainFunctionTest,EquationTest){
-  // Construction et test d'une instance de Equation
 }

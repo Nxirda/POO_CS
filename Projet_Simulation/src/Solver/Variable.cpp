@@ -68,7 +68,7 @@ void Variable::set_M_name(std::string str)
 void Variable::print_in_file(float iteration_Value)
 {
     // Declaration of the output files
-    std::string str = "../Results/Variable_"+this->get_Name()+"-"+std::to_string(iteration_Value)+".dat";
+    std::string str = "../Results/Variable_"+this->get_Name() + ".dat";
     std::ofstream ofs(str, std::ofstream::out);
 
     std::cout << "= Variable name is : " << this->get_Name() << " =\n";
@@ -79,6 +79,7 @@ void Variable::print_in_file(float iteration_Value)
     }
     ofs.close();    
 }
+
 #else
 
 void Variable::print_in_file(float) {}
@@ -86,9 +87,8 @@ void Variable::print_in_file(float) {}
 #endif
 
 /**/
-/* Variable& Variable::operator=(const Variable &v){
-    //this->m_name = "new_Var";
+Variable& Variable::operator=(const Variable &v){
     this->mesh = v.mesh;
     this->variable = v.variable;
     return *this;
-}  */
+}  
